@@ -7,17 +7,12 @@
 //if arg2 is falsy, test if arg2 is falsy. if so, return true.
 
 function xor(arg1, arg2) {
-  if (arg1) {
-    if (arg2) {
-      return false;
-    } else {
-      return true;
-    }
-  } else if (arg2) {
-    return true;
-  } else {
-    return false;
-  }
+  return !!(arg1 && !arg2 || !arg1 && arg2);
+
+  //we're using a short circuit operator here, if either of these conditionals are true then we short circuit the operation and return the argument passed int.
+  // we want to return a boolean though so using !! coerces a value into it's boolean equivalent.
+  // using ! would return the opposite of the result of the conditional which is not what we want, using !! coerces it to a boolean and then back to the boolean that the conditional returns.
+  //arg1 is truthy and arg2 is truthy return false
 }
 
-console.log(xor(0, 0));
+console.log(xor(0, 1));
