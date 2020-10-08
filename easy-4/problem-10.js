@@ -13,7 +13,8 @@ function swap(string) {
       wordArr.push(first);
     }
 
-    swapArr.push(wordArr.join(""));
+    // swapArr.push(wordArr.join(""));
+    swapArr[i] = arrString[i][0] + 
   }
 
   return swapArr.join(" ");
